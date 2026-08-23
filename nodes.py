@@ -38,7 +38,7 @@ class GeminiNode:
             },
 
             "optional": {
-                 "api_key -- DO NOT PUT KEY HERE, Edit .bat and add: set GOOGLE_API_KEY=YourKeyGoesHere": ("STRING", {"default": ""}),
+                "api_key": ("STRING", {"default": ""}),
                 "proxy": ("STRING", {}),
                 "image_1": ("IMAGE",),
                 "image_2": ("IMAGE",),
