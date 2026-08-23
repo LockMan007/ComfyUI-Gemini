@@ -21,15 +21,22 @@ class GeminiNode:
                 "response_type": (["text", "json"],),
                 "model": (
                     [
-                        "gemma-3-12b-it",
-                        "gemma-3-27b-it",
-                        "gemini-2.0-flash-lite-001",
-                        "gemini-2.0-flash-001",
+                        "gemini-3.7-flash",
+                        "gemini-3.7-flash-thinking",
+                        "gemini-3.6-flash",
+                        "gemini-3.5-flash-lite",
                         "gemini-2.5-flash",
                         "gemini-2.5-pro",
+                        "gemini-2.0-flash-001",
+                        "gemini-2.0-flash-lite-001",
+                        "gemini-1.5-pro",
+                        "gemini-1.5-flash",
+                        "gemma-3-27b-it",
+                        "gemma-3-12b-it",
                     ],
                 ),
             },
+
             "optional": {
                 "api_key": ("STRING", {}),
                 "proxy": ("STRING", {}),
