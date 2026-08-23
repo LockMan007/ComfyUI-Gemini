@@ -48,6 +48,9 @@ These nodes integrate the Gemini API into ComfyUI, allowing you to send prompts 
   - Options:
     - `gemma-3-12b-it`: Very small model that you can run locally or remotely on the Google infrastructure.
     - `gemma-3-27b-it`: Medium size model that you can run locally or remotely on the Google infrastructure.
+    - `gemini-3.7-flash`
+    - `gemini-3.7-flash-thinking`
+    - `gemini-3.6-flash`
     - `gemini-2.0-flash-lite-001`: Old version of the **very** fast and free model.
     - `gemini-2.0-flash-001`: Old version of the fast and free model.
     - `gemini-2.5-flash`: Latest stable version of the fast and free model.
