@@ -38,7 +38,9 @@ class GeminiNode:
             },
 
             "optional": {
-                "api_key": ("STRING", {"default": ""}),
+                # "api_key": ("STRING", {"default": ""}),
+                # Because putting your API key in above means you will share your private key, This turns the field into a read-only instructional box to avoid having an insecure inputbox:
+                "Instructions": ("STRING", {"default": ".bat : set GOOGLE_API_KEY=", "multiline": False}),
                 "proxy": ("STRING", {}),
                 "image_1": ("IMAGE",),
                 "image_2": ("IMAGE",),
@@ -69,7 +71,8 @@ class GeminiNode:
         safety_settings: str,
         response_type: str,
         model: str,
-        api_key: str | None = None,
+        # api_key: str | None = None,
+        Instructions=None,
         proxy: str | None = None,
         image_1: Tensor | list[Tensor] | None = None,
         image_2: Tensor | list[Tensor] | None = None,
@@ -80,6 +83,11 @@ class GeminiNode:
         num_predict: int | None = None,
         **kwargs,
     ):
+        # Explicitly declare api_key as an empty string.
+        # This forces the existing backend code logic below to read exclusively 
+        # from your system environment variables set up in your .bat file!
+        api_key =""
+        
         self.text_output = None
         if not system_instruction:
             system_instruction = None
