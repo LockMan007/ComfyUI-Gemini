@@ -38,9 +38,8 @@ class GeminiNode:
             },
 
             "optional": {
+                # Because putting your API key in above means you will share your private key, this is removed.
                 # "api_key": ("STRING", {"default": ""}),
-                # Because putting your API key in above means you will share your private key, This turns the field into a read-only instructional box to avoid having an insecure inputbox:
-                "Instructions": ("STRING", {"default": ".bat : set GOOGLE_API_KEY=", "multiline": False}),
                 "proxy": ("STRING", {}),
                 "image_1": ("IMAGE",),
                 "image_2": ("IMAGE",),
@@ -72,7 +71,6 @@ class GeminiNode:
         response_type: str,
         model: str,
         # api_key: str | None = None,
-        Instructions=None,
         proxy: str | None = None,
         image_1: Tensor | list[Tensor] | None = None,
         image_2: Tensor | list[Tensor] | None = None,
@@ -125,5 +123,5 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "Ask_Gemini": "Ask Gemini",
+    "Ask_Gemini": "Ask Gemini (.bat : set GOOGLE_API_KEY=)",
 }
